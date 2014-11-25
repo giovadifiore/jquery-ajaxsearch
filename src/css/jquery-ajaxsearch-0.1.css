@@ -1,0 +1,314 @@
+.ajax-search-wrapper {
+    position: relative
+}
+
+.ajax-search-wrapper input[type="text"]:focus {
+    background-color: #fff;
+    border: 1px solid rgba(68, 136, 68, 0.4);
+    box-shadow: none
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper {
+    background: #fff;
+    border: 1px solid rgba(68, 136, 68, 0.4);
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    box-shadow: 0 0 4px #ccc;
+    position: absolute;
+    z-index: 9999;
+    height: 312px;
+    width: 100%;
+    margin-top: -1px;
+    overflow-y: scroll
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper.hide {
+    display: none
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 99999;
+    background: #fff
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul {
+    width: 100%;
+    margin: 0;
+    list-style-type: none
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li {
+    padding: 5px 8px
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-main-wrapper {
+    overflow: hidden;
+    max-width: 100%
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-main-wrapper:after {
+    display: table;
+    content: "";
+    line-height: 0;
+    clear: both
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-anchor-wrapper {
+    float: left;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 40px;
+    font-size: 108%
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-anchor-wrapper a:hover {
+    cursor: pointer;
+    text-decoration: none
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-anchor-wrapper a .searched {
+    font-weight: bold
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-image-wrapper {
+    width: 9%;
+    margin-right: 1%;
+    -webkit-box-sizing: border-box;
+    -khtml-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+    float: left;
+    overflow: hidden;
+    border: 1px solid rgba(68, 136, 68, 0.2);
+    background: #fff;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-image-wrapper img.list-item-image {
+    max-width: 100%
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li .list-item-readmore-wrapper {
+    position: relative;
+    width: 9%;
+    margin-left: 1%;
+    float: left;
+    text-align: center;
+    color: #888;
+    font-size: 16px;
+    line-height: 40px;
+    left: 10%;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li.selected {
+    background: rgba(68, 136, 68, 0.1)
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li.selected .list-item-readmore-wrapper {
+    -webkit-transform: translate(-40px, 0);
+    -moz-transform: translate(-40px, 0);
+    -ms-transform: translate(-40px, 0);
+    -o-transform: translate(-40px, 0)
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-searchresult-container ul li:hover {
+    cursor: pointer
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle {
+    margin: 126px auto 0;
+    position: relative;
+    z-index: 99998;
+    width: 60px;
+    height: 60px;
+    -moz-transform: scale(.6);
+    -webkit-transform: scale(.6);
+    -ms-transform: scale(.6);
+    -o-transform: scale(.6);
+    transform: scale(.6)
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle.hide {
+    display: none
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle .f_circleG {
+    position: absolute;
+    background-color: #FFFFFF;
+    height: 11px;
+    width: 11px;
+    -moz-border-radius: 8px;
+    -moz-animation-name: f_fadeG;
+    -moz-animation-duration: 0.8s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+    -webkit-border-radius: 8px;
+    -webkit-animation-name: f_fadeG;
+    -webkit-animation-duration: 0.8s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+    -ms-border-radius: 8px;
+    -ms-animation-name: f_fadeG;
+    -ms-animation-duration: 0.8s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+    -o-border-radius: 8px;
+    -o-animation-name: f_fadeG;
+    -o-animation-duration: 0.8s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+    border-radius: 8px;
+    animation-name: f_fadeG;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+    animation-direction: linear
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_01 {
+    left: 0;
+    top: 25px;
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    -ms-animation-delay: 0.3s;
+    -o-animation-delay: 0.3s;
+    animation-delay: 0.3s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_02 {
+    left: 7px;
+    top: 7px;
+    -moz-animation-delay: 0.4s;
+    -webkit-animation-delay: 0.4s;
+    -ms-animation-delay: 0.4s;
+    -o-animation-delay: 0.4s;
+    animation-delay: 0.4s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_03 {
+    left: 25px;
+    top: 0;
+    -moz-animation-delay: 0.5s;
+    -webkit-animation-delay: 0.5s;
+    -ms-animation-delay: 0.5s;
+    -o-animation-delay: 0.5s;
+    animation-delay: 0.5s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_04 {
+    right: 7px;
+    top: 7px;
+    -moz-animation-delay: 0.6s;
+    -webkit-animation-delay: 0.6s;
+    -ms-animation-delay: 0.6s;
+    -o-animation-delay: 0.6s;
+    animation-delay: 0.6s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_05 {
+    right: 0;
+    top: 25px;
+    -moz-animation-delay: 0.7s;
+    -webkit-animation-delay: 0.7s;
+    -ms-animation-delay: 0.7s;
+    -o-animation-delay: 0.7s;
+    animation-delay: 0.7s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_06 {
+    right: 7px;
+    bottom: 7px;
+    -moz-animation-delay: 0.8s;
+    -webkit-animation-delay: 0.8s;
+    -ms-animation-delay: 0.8s;
+    -o-animation-delay: 0.8s;
+    animation-delay: 0.8s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_07 {
+    left: 25px;
+    bottom: 0;
+    -moz-animation-delay: 0.9s;
+    -webkit-animation-delay: 0.9s;
+    -ms-animation-delay: 0.9s;
+    -o-animation-delay: 0.9s;
+    animation-delay: 0.9s
+}
+
+.ajax-search-wrapper .ajax-searchresult-wrapper .ajax-loading-circle #frotateG_08 {
+    left: 7px;
+    bottom: 7px;
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s
+}
+
+@-moz-keyframes f_fadeG {
+    0% {
+        background-color: #D3E8D3
+    }
+
+    100% {
+        background-color: #FFFFFF
+    }
+}
+
+@-webkit-keyframes f_fadeG {
+    0% {
+        background-color: #D3E8D3
+    }
+
+    100% {
+        background-color: #FFFFFF
+    }
+}
+
+@-ms-keyframes f_fadeG {
+    0% {
+        background-color: #D3E8D3
+    }
+
+    100% {
+        background-color: #FFFFFF
+    }
+}
+
+@-o-keyframes f_fadeG {
+    0% {
+        background-color: #D3E8D3
+    }
+
+    100% {
+        background-color: #FFFFFF
+    }
+}
+
+@keyframes f_fadeG {
+    0% {
+        background-color: #D3E8D3
+    }
+
+    100% {
+        background-color: #FFFFFF
+    }
+}
+
+
