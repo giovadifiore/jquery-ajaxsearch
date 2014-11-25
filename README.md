@@ -1,7 +1,7 @@
 jQuery Ajax Search
 =================
 
-This is a light jQuery plugin that can transform an input text tag into a powerful ajax-enabled search field using a `json` datasource.
+This is a light jQuery plugin that transforms an input text `html` tag into a powerful ajax-enabled search field using a `json` datasource.
 
 This plugin assumes that the datasource is a `json` object list (e.g., e-commerce products) formatted with these properties: 
 
@@ -67,6 +67,6 @@ The `javascript` script to execute is the following (after the `html` input fiel
 ```
 
 ## Example
-Here there is an image example for a particular implementation I've made for a production website application. The searched text is `Nikon D3` and a subset of items are selected from the entire given `json` list downloaded using Ajax.
+Here there is an image example for a particular implementation I've made for a production website application. The searched text is `Nikon D3` and a subset of items are selected from the entire given `json` list downloaded using Ajax. When the user selects one item from the result list, the browser redirects the user to the product page using the `listObject.url` property.
 
 ![](example/example.png)
